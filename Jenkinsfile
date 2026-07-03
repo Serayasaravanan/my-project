@@ -17,7 +17,7 @@ pipeline {
                 sh """
                     docker stop fe 2>/dev/null || true
                     docker rm fe 2>/dev/null || true
-                    docker run -d -p 80:80 -v \$(pwd)/index.html:/usr/share/nginx/html/index.html --name fe ghcr.io/serayasaravanan/nginx:latest
+                    docker run -d -p 3000:80 -v \$(pwd)/index.html:/usr/share/nginx/html/index.html --name fe ghcr.io/serayasaravanan/nginx:latest
                 """
             }
         }
