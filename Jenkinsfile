@@ -15,11 +15,14 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh """
-                pwd
-                ls
                     docker stop fe 2>/dev/null || true
                     docker rm fe 2>/dev/null || true
-                    docker run -d -p 3000:80 -v \$(pwd)/index.html:/usr/share/nginx/html/index.html --name fe ghcr.io/serayasaravanan/nginx:latest
+
+                    docker run -d -p 3000:80 \
+                    -v \$(pwd)/index.html:/usr/share/nginx/html/index.html \
+                    -v \$(pwd)/style.css:/usr/share/nginx/html/style.css \
+                    -v \$(pwd)/script.js:/usr/share/nginx/html/script.js \
+                    --name fe ghcr.io/serayasaravanan/nginx:latest
                 """
             }
         }
