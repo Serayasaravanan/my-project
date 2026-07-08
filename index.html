@@ -1,11 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Flask CI/CD Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps CI/CD Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body style="text-align:center; margin-top:200px;">
-    <h1>Flask CI/CD Pipeline</h1>
-    <h2>Application Hosted Successfully</h2>
-    <h3>Using Docker and Jenkins</h3>
+
+<body>
+
+    <div class="background-animation"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>
+                <i class="fa-solid fa-rocket"></i>
+                DevOps CI/CD Dashboard
+            </h1>
+
+            <p>
+                Automated Deployment using GitHub • Jenkins • Docker • AWS EC2
+            </p>
+
+        </header>
+
+        <!-- Status -->
+
+        <section class="status-card">
+
+            <div class="status-left">
+
+                <h2>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Deployment Successful
+                </h2>
+
+                <p>
+                    Your application has been deployed successfully through the automated CI/CD Pipeline.
+                </p>
+
+            </div>
+
+            <div class="status-right">
+
+                <span class="live-dot"></span>
+
+                <h3>Application Running</h3>
+
+            </div>
+
+        </section>
+
+        <!-- Technology Cards -->
+
+        <section class="cards">
+
+            <div class="card github">
+
+                <i class="fab fa-github"></i>
+
+                <h3>GitHub</h3>
+
+                <p>
+                    Source Code Repository
+                </p>
+
+            </div>
+
+            <div class="card jenkins">
+
+                <i class="fa-solid fa-gears"></i>
+
+                <h3>Jenkins</h3>
+
+                <p>
+                    Continuous Integration
+                </p>
+
+            </div>
+
+            <div class="card docker">
+
+                <i class="fab fa-docker"></i>
+
+                <h3>Docker</h3>
+
+                <p>
+                    Containerization Platform
+                </p>
+
+            </div>
+
+            <div class="card aws">
+
+                <i class="fa-brands fa-aws"></i>
+
+                <h3>AWS EC2</h3>
+
+                <p>
+                    Cloud Deployment Server
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Pipeline -->
+
+        <section class="pipeline">
+
+            <h2>CI/CD Pipeline Workflow</h2>
+
+            <div class="pipeline-flow">
+
+                <div class="step">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+
+                <div class="arrow">➜</div>
+
+                <div class="step">
+                    <i class="fa-solid fa-gears"></i>
+                    <span>Jenkins</span>
+                </div>
+
+                <div class="arrow">➜</div>
+
+                <div class="step">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+
+                <div class="arrow">➜</div>
+
+                <div class="step">
+                    <i class="fa-brands fa-aws"></i>
+                    <span>AWS EC2</span>
+                </div>
+
+                <div class="arrow">➜</div>
+
+                <div class="step success">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>Live Application</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Information -->
+
+        <section class="info-grid">
+
+            <div class="info-box">
+
+                <i class="fa-solid fa-server"></i>
+
+                <h3>Server Status</h3>
+
+                <h2>Running</h2>
+
+            </div>
+
+            <div class="info-box">
+
+                <i class="fa-solid fa-box"></i>
+
+                <h3>Docker</h3>
+
+                <h2>Container Active</h2>
+
+            </div>
+
+            <div class="info-box">
+
+                <i class="fa-solid fa-code-branch"></i>
+
+                <h3>Branch</h3>
+
+                <h2>Main</h2>
+
+            </div>
+
+            <div class="info-box">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Current Time</h3>
+
+                <h2 id="clock">
+                    Loading...
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <h2>99.9%</h2>
+
+                <p>Deployment Success</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>100%</h2>
+
+                <p>Pipeline Completed</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>24/7</h2>
+
+                <p>Server Availability</p>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <h3>
+                <i class="fa-solid fa-user"></i>
+                Created by Seraya
+            </h3>
+
+            <p>
+                DevOps CI/CD Project |
+                GitHub • Jenkins • Docker • AWS EC2
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
-</html> 
+
+</html>
